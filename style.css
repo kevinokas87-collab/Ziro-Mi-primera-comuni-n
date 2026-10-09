@@ -1,0 +1,137 @@
+/*General variable*/
+
+:root{
+    --color-bg-1: #FBF7EC;
+    --color-bg-2: #FFF0DB;
+    --color-bg-blur: #fff0db6b;
+    --color-text:   #4A4A4A;
+    --color-shadow: #1A2538;
+    --color-title: #1A2538;
+    --color-subtitle: #263149;
+    --color-accent:     #D4AF37;
+    --font-primary: "Poppins", sans-serif;
+    --font-secundary: "Lora", serif;
+}
+
+/*reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*Nav bar*/
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 2rem;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    background-color: var(--color-bg-blur);
+    backdrop-filter: blur(5px);
+    z-index: 10;
+    border-radius: 20px;
+
+}
+
+.navlist{
+    display: flex;
+    gap: 12px;
+    list-style: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--color-subtitle);
+    padding:0.25rem 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover{
+    color: var(--color-accent);
+    border-bottom-color: var(--color-accent) ;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5px;
+    text-decoration: none;
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-title);
+
+}
+
+.logo img{
+    height: 100px;
+    width: 100px;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container-left {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: var(--color-title);
+}
+
+.container-left h1{
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+}
+
+.container-left h2{
+    font-family: var(--font-secundary);
+    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 0.9;
+}
+
+.container-left::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 71%;
+    width: 620px;
+    height: 190px;
+    background-color: var(--color-bg-blur);
+    transform: translate(-70%, -50%);
+    z-index: -1;
+    box-shadow: 0 15px 40px var(--color-shadow);
+}
+
+.buttons-hero {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    display: flex;
+    gap: 1rem;
+    z-index: 1;
+}
